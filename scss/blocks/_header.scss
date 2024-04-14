@@ -1,0 +1,70 @@
+.header {
+	min-height: 765px;
+	background: url("../img/header/cat-1920.png") no-repeat;
+	font-weight: 500;
+	transition: .4s;
+	@include mediaLaptop{
+		background-position-x: 40%;
+	}
+	&__section {
+		padding-top: 24px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__menu {
+		display: flex;
+		column-gap: 48px;
+	}
+	&__item {
+		@include mediaSmartphone {
+			display: none;
+		}
+	}
+	.hamburger-button {
+		display: none;
+		@include mediaSmartphone {
+			display: flex;
+		}
+	}
+	&__link:not(.active) {
+		opacity: 0.5;
+	}
+	&__content {
+		margin-top: 240px;
+		width: 630px;
+		h1 {
+			font-family: $font-accent;
+			line-height: 83%;
+			font-size: 108px;
+		}
+		p {
+			margin-top: 28px;
+			line-height: 167%;
+			opacity: 0.8;
+		}
+		span {
+			white-space: nowrap;
+		}
+	}
+}
+.active{
+	color: $black;
+}
+
+.hamburger-button {
+	flex-direction: column;
+	row-gap: 7px;
+
+	&__top, &__middle, &__bottom{
+		width: 36px;
+		height: 3px;
+		background: $black;
+	}
+}
+
+.wrapper {
+	@include mediaLaptop {
+		max-width: 961px;
+	}
+}

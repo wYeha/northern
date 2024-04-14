@@ -1,0 +1,30 @@
+.citation {
+	margin-top: 144px;
+	font-family: $font-accent;
+	font-size: 87px;
+	line-height: 100%;
+	position: relative;
+	z-index: 1;
+	&::before{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 30vw;
+		width: 520px;
+		height: 520px;
+		background-image: radial-gradient($accent, $white);
+		filter: blur(150px);
+		border-radius: 50%;
+		z-index: -1;
+	}
+	&::after{
+		content: url("../img/citate-bg-star.svg");
+		position: absolute;
+		top: 0;
+		left: 60vw;
+		transform: translate(0, -15%);
+		overflow: hidden;
+		z-index: -1;
+	}
+}
+

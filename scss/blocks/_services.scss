@@ -1,0 +1,54 @@
+.services {
+	margin-top: 144px;
+	display: flex;
+	justify-content: space-between;
+	@include mediaLaptop{
+		column-gap: 24px;
+	}
+	p {
+		margin-top: 16px;
+		line-height: 167%;
+		opacity: 0.6;
+		flex: 1;
+	}
+	&__desc {
+		flex: 1;
+		max-width: 485px;
+	}
+	&__list {
+		max-width: 624px;
+		flex:1;
+		ul {
+			display: flex;
+			flex-direction: column;
+			row-gap: 24px;
+		}
+	}
+	&__item {
+		box-sizing: border-box;
+		border-bottom: 1px solid $black;
+		
+		background: linear-gradient(to right, rgba($accent, 0.5) 50%, transparent 50%) right;
+		background-size: 210%;
+		transition: all .4s ease-in-out,;
+		&:hover{
+			border-bottom: 1px solid rgba($accent, 0.5);
+			transform: scale(1.02);
+			background-position: left;
+		}
+	}
+	&__link {
+		height: 48px;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 120%;
+		text-transform: uppercase;
+		display: flex;
+		justify-content: space-between;
+		
+		img {
+			width: 24px;
+			height: 24px;
+		}
+	}
+}

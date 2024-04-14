@@ -1,0 +1,80 @@
+.health-program {
+	margin-top: 144px;
+	font-size: 20px;
+	line-height: 120%;
+	font-weight: 400;
+	h3{
+		padding-top: 14px;
+	}
+	&__card {
+		padding: 48px;
+		margin-top: 40px;
+		display: flex;
+		justify-content: space-between;
+		box-shadow: inset 0 0 0 1px $black;
+	}
+	&__superscript {
+		font-weight: 700;
+		letter-spacing: 0.15em;
+		text-transform: uppercase;
+		opacity: 0.2;
+	}
+	&__desc {
+		padding-top: 30px;
+	}
+	&__price {
+		font-family: $font-main;
+		font-size: 48px;
+		font-weight: 700;
+		padding-bottom: 20px;
+		line-height: 100%;
+	}
+}
+.left-info {
+	max-width: 520px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.hp-backline-h2{
+	position: relative;
+	z-index: 1;
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 30px;
+		background: $accent;
+		z-index: -1;
+		bottom: 20px;
+	}
+}
+.hp-backline-h3 {
+	position: relative;
+	z-index: 1;
+	&::after{
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 20px;
+		background: $accent;
+		z-index: -1;
+		bottom: 10px;
+	}
+}
+.title-3-hidden{
+	display: none;
+	@include mediaLaptop{
+		display: block;
+	}
+}
+.title-3{
+	@include mediaLaptop{
+		display: none;
+	}
+}
+
+
+
